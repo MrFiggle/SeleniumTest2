@@ -4,6 +4,7 @@
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,11 +16,25 @@ public class MyFirstTest {
 
         WebDriver driver = new FirefoxDriver();
 
+        /* login to cart test with correct credentials
+        driver.navigate().to("https://carttest.fundycentral.com/login?path=download");
+        driver.findElement(By.id("username")).sendKeys("peter@fundysoftware.com");
+        driver.findElement(By.id("password")).sendKeys("qasoftware");
+        driver.findElement(By.xpath(".//*[@id='form_login']/div[3]/button[2]")).click();
+        */
+
+        /*
+        driver.navigate().to("http://fundydesigner.com/");
+        driver.findElement(By.xpath(".//*[@id='page-home']/div/div[1]/div/div/div[1]/div/div/p[4]/a[2]")).click();
+        */
+
+        /*
         driver.navigate().to("http://seleniumsimplified.com");
         Assert.assertTrue("title should start with Selenium Simplified",
                 driver.getTitle().startsWith("Selenium Simplified"));
         driver.close();
         driver.quit();
+        */
 
         /*
         WebDriver driver = new ChromeDriver();
