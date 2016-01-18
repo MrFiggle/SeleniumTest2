@@ -18,7 +18,10 @@ public class MyFirstTest {
 
         //login to cart test with correct credentials
         driver.navigate().to("https://carttest.fundycentral.com/login?path=download");
-        driver.findElement(By.id("username")).sendKeys("peter@fundysoftware.com");
+        //Using custom xpath to navigate tag names to get to email address field
+        driver.findElement(By.xpath("//div[@id='ember357']/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/input")).sendKeys("peter@fundysoftware.com");
+
+        //driver.findElement(By.id("username")).sendKeys("peter@fundysoftware.com");
         driver.findElement(By.id("password")).sendKeys("qasoftware");
         //input[@id='password'
         driver.findElement(By.xpath(".//*[@id='form_login']/div[3]/button[2]")).click();
